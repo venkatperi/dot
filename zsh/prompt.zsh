@@ -1,3 +1,4 @@
+#autoload -U colors && colors
 autoload -Uz vcs_info
 
 zstyle ':vcs_info:*' stagedstr '%F{green}●'
@@ -16,7 +17,7 @@ theme_precmd () {
 }
 
 setopt prompt_subst
-PROMPT='%m:%B%F{magenta}%c%B%F{green}${vcs_info_msg_0_}%B%F{magenta} %F{white}%% %F{grey}'
+PROMPT='%F{yellow}%m:%B%F{magenta}%c%B%F{green}${vcs_info_msg_0_}%B%F{magenta} %F{white}%% %{$reset_color%}'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
