@@ -5,3 +5,5 @@ alias ls='ls --color=auto'
 alias gs='git status'
 alias gac='git add . && git commit -m '
 alias gpom='git push origin master'
+
+alias nis='npm install --save'
