@@ -10,3 +10,4 @@ alias gwcb='./gradlew clean build'
 alias gw='./gradlew'
 
 alias nis='npm install --save'
+alias nid='npm install --save --only=dev'
