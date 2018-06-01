@@ -48,3 +48,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 set -o vi
 
+#disable auto correct
+unsetopt correct
+
