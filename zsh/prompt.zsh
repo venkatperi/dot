@@ -16,8 +16,9 @@ theme_precmd () {
     vcs_info
 }
 
+node_version=$(node --version)
 setopt prompt_subst
-PROMPT='%F{yellow}%m:%B%F{magenta}%c%B%F{green}${vcs_info_msg_0_}%B%F{magenta} %F{white}%% %{$reset_color%}'
+PROMPT='%F{yellow}%m:%F{blue}${node_version}:%B%F{magenta}%c%B%F{green}${vcs_info_msg_0_}%B%F{magenta} %F{white}$ %{$reset_color%}'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
