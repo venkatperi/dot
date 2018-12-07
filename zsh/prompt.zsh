@@ -24,3 +24,4 @@ PROMPT='%F{yellow}%m:%F{blue}${node_version}:%B%F{magenta}%c%B%F{green}${vcs_inf
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
 
+echo -ne "\033]0;$(hostname)\007"
