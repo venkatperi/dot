@@ -14,6 +14,7 @@ theme_precmd () {
         zstyle ':vcs_info:*' formats ' [%b%c%u%B%F{red}●%F{green}]'
     }
 
+    node_version="N=$(node --version)|P=$(python -V | cut -d' ' -f2)|R=$(ruby --version | cut -d' ' -f2)"
     vcs_info
 }
 
