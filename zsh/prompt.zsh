@@ -14,7 +14,8 @@ theme_precmd () {
         zstyle ':vcs_info:*' formats ' [%b%c%u%B%F{red}●%F{green}]'
     }
 
-    node_version="N$(node --version | cut -d'v' -f2)|P$(python -V | cut -d' ' -f2)"
+    node_version="N$(node --version | cut -d'v' -f2)"
+    #node_version="N$(node --version | cut -d'v' -f2)|P$(python -V | cut -d' ' -f2)"
     #|R$(ruby --version | cut -d' ' -f2 | cut -d'p' -f1)|G$(go version | cut -d' ' -f3 | cut -d'o' -f2)"
     vcs_info
 }
