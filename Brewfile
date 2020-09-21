@@ -44,4 +44,4 @@ cask "vivaldi"
 cask "witch"
 cask "dropbox"
 cask "slack"
-
+cask "disk-inventory-x"
