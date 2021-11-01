@@ -9,9 +9,9 @@ zstyle ':vcs_info:*' enable git svn
 
 theme_precmd () {
     if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-        zstyle ':vcs_info:*' formats ' [%b%c%u%B%F{green}]'
+        zstyle ':vcs_info:*' formats ' [%b%c%u%F{green}]'
     } else {
-        zstyle ':vcs_info:*' formats ' [%b%c%u%B%F{red}●%F{green}]'
+        zstyle ':vcs_info:*' formats ' [%b%c%u%F{red}●%F{green}]'
     }
 
     node_version="N$(node --version | cut -d'v' -f2)"
@@ -22,7 +22,8 @@ theme_precmd () {
 
 node_version=$(node --version)
 setopt prompt_subst
-PROMPT='%F{yellow}%m:%F{blue}${node_version}:%B%F{magenta}%c%B%F{green}${vcs_info_msg_0_}%B%F{magenta} %F{white}$ %F{grey%}'
+PROMPT='%F{yellow}%m:%F{green}${node_version}:%F{magenta}%c%F{green}${vcs_info_msg_0_}%F{magenta} %F{white}$ %F{grey%}'
+RPROMPT="%D{%f/%m/%y} %D{%L:%M:%S}"
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
